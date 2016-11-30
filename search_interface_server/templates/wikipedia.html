@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>Wikipedia Search Engine</h1>
+    <br>
+    <!-- Search interface -->
+    <form action="" enctype=multipart/form-data >
+        <div class = "form-group">
+            <label class = "control-label">Search</label>
+           <input id = "wikipedia_search_input" type="text" name="q">
+        </div>
+        <br>
+        <div class = "form-group text-center">
+            <input type = "range" min = "0" max="1" step = "0.01" class = "btn btn-success" id = "w_slider" oninput="w_display.value = w_slider.value" name = "w">
+            <output id= "w_display">0.5</output>
+        </div>
+        <br>
+        <div class = "form-group text-center">
+            <input type = "submit" value="Search" class = "btn btn-success" id = "wikipedia_search_button">
+        </div>
+    </form>
+
+    <!-- Search results -->
+    {% if search %}
+        {% if docs|length == 0 %}
+            <p class = "no_search_results"> No search results </p>
+        {% else %}
+            <h2>{{docs|length}} search results:</h2>
+            {% for doc in docs %}
+                    <h3>{{ doc.title }}</h3>
+                    <p> {{ doc.summary }} </p>
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
