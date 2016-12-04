@@ -1,7 +1,7 @@
 env = dict(
-	host = '0.0.0.0',
-	port = 3000,
-	user = 'root',
-	password = 'root',
-	db = 'proj5',
+	host = 'class5.eecs.umich.edu',
+	port = 5850,
+	user = 'group75',
+	password = 'group75pw!',
+	db = 'group75db',
 )
