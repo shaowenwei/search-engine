@@ -1,0 +1,6 @@
+venv/
+static/images
+*.pyc
+vagrant.sh
+Vagrantfile
+hadoop/

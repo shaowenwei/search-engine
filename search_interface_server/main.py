@@ -16,8 +16,8 @@ def wiki_route():
         search = True
 
         # Sends get request to index server
-        response = requests.get('http://' + config.env['host'] + ':' + str(config.env['port'] - 1) + '/?q=' + query + "&w=" + weight)
-	print(response)
+        response = requests.get('http://' + config.env['host'] + ':' + str(config.env['port'] - 1)+"/hd1qzdkp/p5"+ '/?q=' + query + "&w=" + weight)
+	#print(response)
 
         response_json = json.loads(response.text)
         
@@ -26,6 +26,7 @@ def wiki_route():
             cur = db.cursor()
             cur.execute('SELECT * FROM ' + 'Documents WHERE docid = ' + str(item['docid']))
             docs.append(cur.fetchall()[0])
+            #print(docs)
 
     options = {
         'search': search,

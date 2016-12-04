@@ -6,7 +6,7 @@ import config
 # Initialize Flask app with the template folder address
 app = Flask(__name__, template_folder='templates')
 
-app.register_blueprint(main.main)
+app.register_blueprint(main.main, url_prefix='/hd1qzdkp/p5')
 
 # Listen on external IPs
 # For us, listen to port 3000 so you can just run 'python app.py' to start the server
