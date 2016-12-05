@@ -163,6 +163,7 @@ def index_server():
     for key in score:
         tmp = {}
         docid = key
+        docid = int(docid)
         sc = score[key]
         tmp = {"docid" : docid, "score" : sc}
         value.append(tmp)
