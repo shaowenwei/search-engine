@@ -65,7 +65,7 @@ def index_server():
     weight = request.args.get('w')
     qu = str(qu)
     qu = qu.lower()
-    qu = re.sub(r'[^a-zA-Z0-9.]+', ' ', qu)
+    qu = re.sub(r'[^a-zA-Z0-9]+', '', qu)
     word = ""
     query = []
     for ch in qu:
