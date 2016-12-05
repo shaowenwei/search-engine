@@ -167,6 +167,8 @@ def index_server():
         sc = score[key]
         tmp = {"docid" : docid, "score" : sc}
         value.append(tmp)
-    newValue = sorted(value, key=itemgetter('score','docid'), reverse=True)
+    #newValue = sorted(value, key=itemgetter('score','docid'), reverse=True)
+    newValue = sorted(value, key=itemgetter('docid'))
+    newValue = sorted(newValue, key=itemgetter('score'), reverse=True)
     jDict = {"hits" : newValue}
     return jsonify(jDict)
