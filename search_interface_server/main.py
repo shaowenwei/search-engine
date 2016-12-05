@@ -16,7 +16,7 @@ def wiki_route():
         search = True
 
         # Sends get request to index server
-        response = requests.get('http://' + config.env['host'] + ':' + str(config.env['port'] - 1)+"/hd1qzdkp/p5"+ '/?q=' + query + "&w=" + weight)
+        response = requests.get('http://class5.eecs.umich.edu' + ':' + str(config.env['port'] - 1)+"/hd1qzdkp/p5"+ '/?q=' + query + "&w=" + weight)
 	#print(response)
 
         response_json = json.loads(response.text)
