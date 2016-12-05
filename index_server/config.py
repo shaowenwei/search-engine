@@ -1,5 +1,5 @@
 env = dict(
-	host = 'class5.eecs.umich.edu',
+	host = 'localhost',
 	port = 5850,
 	user = 'group75',
 	password = 'group75pw!',
